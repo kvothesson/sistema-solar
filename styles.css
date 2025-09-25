@@ -187,6 +187,37 @@ body {
     animation-duration: 56s;
 }
 
+/* Órbitas de planetas enanos */
+.pluto-orbit {
+    width: 640px;
+    height: 640px;
+    animation-duration: 64s;
+}
+
+.ceres-orbit {
+    width: 260px;
+    height: 260px;
+    animation-duration: 18s;
+}
+
+.eris-orbit {
+    width: 720px;
+    height: 720px;
+    animation-duration: 72s;
+}
+
+.haumea-orbit {
+    width: 680px;
+    height: 680px;
+    animation-duration: 68s;
+}
+
+.makemake-orbit {
+    width: 700px;
+    height: 700px;
+    animation-duration: 70s;
+}
+
 /* Planetas individuales */
 .mercury {
     width: 8px;
@@ -302,6 +333,97 @@ body {
 }
 
 @keyframes neptuneRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Planetas enanos */
+.planet.dwarf {
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+}
+
+.pluto {
+    width: 6px;
+    height: 6px;
+    top: -3px;
+}
+
+.pluto .planet-surface {
+    background: linear-gradient(45deg, #8b4513, #d2691e);
+    box-shadow: 0 0 6px rgba(139, 69, 19, 0.6);
+    animation: plutoRotate 8s linear infinite;
+}
+
+@keyframes plutoRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.ceres {
+    width: 4px;
+    height: 4px;
+    top: -2px;
+}
+
+.ceres .planet-surface {
+    background: linear-gradient(45deg, #696969, #a9a9a9);
+    box-shadow: 0 0 4px rgba(105, 105, 105, 0.5);
+    animation: ceresRotate 6s linear infinite;
+}
+
+@keyframes ceresRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.eris {
+    width: 6px;
+    height: 6px;
+    top: -3px;
+}
+
+.eris .planet-surface {
+    background: linear-gradient(45deg, #2f4f4f, #708090);
+    box-shadow: 0 0 6px rgba(47, 79, 79, 0.6);
+    animation: erisRotate 10s linear infinite;
+}
+
+@keyframes erisRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.haumea {
+    width: 5px;
+    height: 5px;
+    top: -2.5px;
+}
+
+.haumea .planet-surface {
+    background: linear-gradient(45deg, #e6e6fa, #d8bfd8);
+    box-shadow: 0 0 5px rgba(230, 230, 250, 0.5);
+    animation: haumeaRotate 7s linear infinite;
+}
+
+@keyframes haumeaRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.makemake {
+    width: 5px;
+    height: 5px;
+    top: -2.5px;
+}
+
+.makemake .planet-surface {
+    background: linear-gradient(45deg, #cd853f, #daa520);
+    box-shadow: 0 0 5px rgba(205, 133, 63, 0.5);
+    animation: makemakeRotate 9s linear infinite;
+}
+
+@keyframes makemakeRotate {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }

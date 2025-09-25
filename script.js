@@ -104,6 +104,71 @@ class SolarSystemSimulation {
                 moons: '16 conocidas',
                 description: 'El planeta más lejano del Sol. Tiene los vientos más fuertes del sistema solar, alcanzando hasta 2,100 km/h.',
                 atmosphere: 'Hidrógeno (80%), Helio (19%), Metano (1%)'
+            },
+            pluto: {
+                name: 'Plutón',
+                distance: '5,906 millones km',
+                diameter: '2,377 km',
+                mass: '1.31 × 10²² kg',
+                temperature: '-233°C promedio',
+                dayLength: '6.4 días terrestres',
+                yearLength: '248 años terrestres',
+                moons: '5 conocidas',
+                description: 'Planeta enano famoso por haber sido degradado de planeta principal en 2006. Tiene una órbita muy elíptica e inclinada.',
+                atmosphere: 'Nitrógeno (90%), Metano (10%)',
+                type: 'Planeta enano'
+            },
+            ceres: {
+                name: 'Ceres',
+                distance: '414 millones km',
+                diameter: '946 km',
+                mass: '9.39 × 10²⁰ kg',
+                temperature: '-106°C promedio',
+                dayLength: '9.1 horas',
+                yearLength: '4.6 años terrestres',
+                moons: '0',
+                description: 'El objeto más grande del cinturón de asteroides y el único planeta enano en el sistema solar interior. Tiene agua en su superficie.',
+                atmosphere: 'Muy tenue, vapor de agua',
+                type: 'Planeta enano'
+            },
+            eris: {
+                name: 'Eris',
+                distance: '10,120 millones km',
+                diameter: '2,326 km',
+                mass: '1.67 × 10²² kg',
+                temperature: '-243°C promedio',
+                dayLength: '25.9 horas',
+                yearLength: '558 años terrestres',
+                moons: '1 (Disnomia)',
+                description: 'El planeta enano más masivo conocido y el más lejano del Sol. Su descubrimiento llevó a la reclasificación de Plutón.',
+                atmosphere: 'Muy tenue, metano',
+                type: 'Planeta enano'
+            },
+            haumea: {
+                name: 'Haumea',
+                distance: '6,452 millones km',
+                diameter: '1,632 km',
+                mass: '4.01 × 10²¹ kg',
+                temperature: '-241°C promedio',
+                dayLength: '3.9 horas',
+                yearLength: '285 años terrestres',
+                moons: '2 conocidas',
+                description: 'Planeta enano con forma elipsoidal debido a su rápida rotación. Tiene anillos y una superficie de hielo cristalino.',
+                atmosphere: 'Sin atmósfera detectable',
+                type: 'Planeta enano'
+            },
+            makemake: {
+                name: 'Makemake',
+                distance: '6,850 millones km',
+                diameter: '1,430 km',
+                mass: '3.1 × 10²¹ kg',
+                temperature: '-239°C promedio',
+                dayLength: '22.5 horas',
+                yearLength: '309 años terrestres',
+                moons: '1 conocida',
+                description: 'Planeta enano sin atmósfera detectable. Su superficie está cubierta de metano congelado, dándole un color rojizo.',
+                atmosphere: 'Sin atmósfera',
+                type: 'Planeta enano'
             }
         };
         
@@ -203,6 +268,21 @@ class SolarSystemSimulation {
                     break;
                 case 'Digit8':
                     this.selectPlanet('neptune');
+                    break;
+                case 'Digit9':
+                    this.selectPlanet('pluto');
+                    break;
+                case 'KeyQ':
+                    this.selectPlanet('ceres');
+                    break;
+                case 'KeyW':
+                    this.selectPlanet('eris');
+                    break;
+                case 'KeyE':
+                    this.selectPlanet('haumea');
+                    break;
+                case 'KeyR':
+                    this.selectPlanet('makemake');
                     break;
             }
         });
@@ -337,11 +417,13 @@ class SolarSystemSimulation {
                     <li>Click en un planeta para seleccionarlo</li>
                     <li>Espacio: Pausar/Reproducir</li>
                     <li>R: Reiniciar simulación</li>
-                    <li>1-8: Seleccionar planetas directamente</li>
+                    <li>1-8: Planetas principales</li>
+                    <li>9: Plutón, Q: Ceres, W: Eris</li>
+                    <li>E: Haumea, R: Makemake</li>
                     <li>ESC: Deseleccionar</li>
                 </ul>
                 <p style="margin-top: 15px;"><strong>Datos:</strong></p>
-                <p>Esta simulación muestra las órbitas de los 8 planetas principales del sistema solar con velocidades relativas aproximadas.</p>
+                <p>Esta simulación muestra las órbitas de los 8 planetas principales y 5 planetas enanos del sistema solar con velocidades relativas aproximadas.</p>
             `;
         }
     }
@@ -389,10 +471,12 @@ document.addEventListener('DOMContentLoaded', () => {
     • Click en planetas para seleccionarlos
     • Espacio: Pausar/Reproducir
     • R: Reiniciar
-    • 1-8: Seleccionar planetas
+    • 1-8: Planetas principales
+    • 9: Plutón, Q: Ceres, W: Eris
+    • E: Haumea, R: Makemake
     • ESC: Deseleccionar
     
-    ¡Disfruta explorando nuestro sistema solar!
+    ¡Disfruta explorando nuestro sistema solar completo!
     `);
 });
 
