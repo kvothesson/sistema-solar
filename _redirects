@@ -1,6 +1,0 @@
-# Redirects for GitHub Pages
-# Redirect root without trailing slash to root with trailing slash
-/ /index.html 200
-
-# Handle any other redirects
-/* /index.html 200

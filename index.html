@@ -6,6 +6,12 @@
     <title>Sistema Solar - Simulación Interactiva</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <script>
+        // Ensure proper URL handling for GitHub Pages
+        if (window.location.pathname === '/sistema-solar' && window.location.pathname !== '/sistema-solar/') {
+            window.history.replaceState(null, null, '/sistema-solar/');
+        }
+    </script>
 </head>
 <body>
     <div class="universe">
