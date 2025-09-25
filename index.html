@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Solar - Simulación Interactiva</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="universe">
+        <!-- Estrellas de fondo -->
+        <div class="stars"></div>
+        <div class="stars2"></div>
+        <div class="stars3"></div>
+        
+        <!-- Sistema Solar -->
+        <div class="solar-system">
+            <!-- Sol -->
+            <div class="sun">
+                <div class="sun-core"></div>
+                <div class="sun-corona"></div>
+            </div>
+            
+            <!-- Órbitas de los planetas -->
+            <div class="orbit mercury-orbit">
+                <div class="planet mercury" data-planet="mercury">
+                    <div class="planet-surface"></div>
+                </div>
+            </div>
+            
+            <div class="orbit venus-orbit">
+                <div class="planet venus" data-planet="venus">
+                    <div class="planet-surface"></div>
+                </div>
+            </div>
+            
+            <div class="orbit earth-orbit">
+                <div class="planet earth" data-planet="earth">
+                    <div class="planet-surface"></div>
+                    <div class="moon-orbit">
+                        <div class="moon"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="orbit mars-orbit">
+                <div class="planet mars" data-planet="mars">
+                    <div class="planet-surface"></div>
+                </div>
+            </div>
+            
+            <div class="orbit jupiter-orbit">
+                <div class="planet jupiter" data-planet="jupiter">
+                    <div class="planet-surface"></div>
+                    <div class="planet-rings">
+                        <div class="ring ring1"></div>
+                        <div class="ring ring2"></div>
+                        <div class="ring ring3"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="orbit saturn-orbit">
+                <div class="planet saturn" data-planet="saturn">
+                    <div class="planet-surface"></div>
+                    <div class="planet-rings">
+                        <div class="ring ring1"></div>
+                        <div class="ring ring2"></div>
+                        <div class="ring ring3"></div>
+                        <div class="ring ring4"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="orbit uranus-orbit">
+                <div class="planet uranus" data-planet="uranus">
+                    <div class="planet-surface"></div>
+                    <div class="planet-rings">
+                        <div class="ring ring1"></div>
+                        <div class="ring ring2"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="orbit neptune-orbit">
+                <div class="planet neptune" data-planet="neptune">
+                    <div class="planet-surface"></div>
+                </div>
+            </div>
+            
+            <!-- Cinturón de asteroides -->
+            <div class="asteroid-belt"></div>
+        </div>
+        
+        <!-- Panel de información -->
+        <div class="info-panel">
+            <div class="planet-info">
+                <h2 id="planet-name">Sistema Solar</h2>
+                <div id="planet-details">
+                    <p>Selecciona un planeta para obtener información detallada</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Controles -->
+        <div class="controls">
+            <div class="control-group">
+                <label for="speed">Velocidad:</label>
+                <input type="range" id="speed" min="0" max="10" value="1" step="0.5">
+                <span id="speed-value">1x</span>
+            </div>
+            
+            <div class="control-group">
+                <button id="play-pause" class="control-btn">⏸️</button>
+                <button id="reset" class="control-btn">🔄</button>
+            </div>
+            
+            <div class="control-group">
+                <label>
+                    <input type="checkbox" id="show-orbits" checked>
+                    Mostrar órbitas
+                </label>
+            </div>
+            
+            <div class="control-group">
+                <label>
+                    <input type="checkbox" id="show-info" checked>
+                    Mostrar información
+                </label>
+            </div>
+        </div>
+        
+        <!-- Indicador de escala -->
+        <div class="scale-indicator">
+            <div class="scale-text">Escala: 1 unidad = 10 millones de km</div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
